@@ -1,0 +1,87 @@
+<div fxLayout="column">
+  <div fxFlex="1 1 100%" style="text-align: center">
+    <a mat-button><span class="fa fa-chevron-left"></span></a>　選擇的興趣圈　
+    <span class="flex-spacer"></span>
+    <a mat-button><span class="fa fa-chevron-right"></span></a>
+  </div>
+</div>
+
+<hr>
+
+<div class="container"
+      fxLayout="row"
+      fxLayout.sm="row"
+      fxLayout.xs="column">
+      
+  <div fxLayout="column"
+        fxLayout.sm="column"
+        fxLayout.xs="column"
+        fxLayoutGap="10px" fxFlex="1 1 52%" *ngIf="events">
+        
+    <h2>圈裡的那些事兒</h2>
+    <hr>
+    
+    <div fxFlex *ngFor="let event of events">
+      
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar>
+            <img src="./../../assets/images/favicon.ico" />
+          </div>
+          <mat-card-title>{{event.host}}</mat-card-title>
+          <mat-card-subtitle>
+            <mat-chip-list><mat-chip color="accent" selected="true">{{event.category}}</mat-chip></mat-chip-list>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{event.image}}" class="mat-card-image">
+        <mat-card-title>
+          <span class="mat-headline">{{event.name}}</span>
+        </mat-card-title>
+        <mat-card-content>
+          <p>{{event.description}}</p>
+          <mat-progress-bar mode="determinate" value="{{event.progress}}"></mat-progress-bar>
+        </mat-card-content>
+        <mat-card-actions>
+          <span class="flex-spacer"></span>
+          <button mat-button><span class="fa fa-info-circle"></span> 查看更多</button>
+          <button mat-button><span class="fa fa-star-o"></span> 追蹤</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+    <div fxLayout="column"
+      fxLayout.sm="column"
+      fxLayout.xs="column"
+      fxLayoutGap="10px" 
+      style="margin: 0px 0px 0px 20px"
+      fxFlex *ngIf="bigvs">
+
+      <h2>圈裡的那些人兒</h2>
+      <hr>
+
+      <div fxFlex="1 1 10%" fxFlex.sm="1 1 100%" fxFlex.xs="1 1 100%" *ngFor="let bigv of bigvs">
+        <mat-list fxFlex>
+          <mat-list-item>
+            <img class="mat-list-avatar" src="{{bigv.image}}" alt="{{bigv.name}}">
+            <div class="mat-list-item-text" layout="column">
+              <mat-chip-list><h3 style="margin: 10px;padding-top: 15px">{{bigv.name}} </h3><mat-chip color="accent" selected="true">{{bigv.category}}</mat-chip></mat-chip-list>
+              <span style="margin: 0px 10px">{{bigv.description}}</span>
+              <span style="opacity: 0.4"> | {{bigv.results}} posts</span>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+</div>
+
+<hr>
+
+<div fxLayout="row">
+  <div fxFlex="1 1 80%">
+    <span class="fa fa-calendar-check-o" style="font-size: 30px" ></span>　<span style="font-size: 36px">30天AngularJS從0到1</span>
+  </div>
+  <div fxFlex>
+    <a mat-button style="line-height: 54px" ><span class="fa fa-heart-o" style="font-size: 26px"></span></a>
+  </div>
+</div>

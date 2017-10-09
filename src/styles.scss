@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kozuka Mincho Pro', 'Kozuka Mincho Std', serif ;
+}
+
+.container {
+    display: flex;
+    margin: 20px 30px;
+}
+
+.flex-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-button {
+    min-width: 50px !important;
+}
+
+.mat-input-element {
+    background: transparent;
+    border: transparent;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #f3f3f3;
+    width: 400px;
+}
+
+.signIn {
+    background: #f3f3f3;
+    color: #673ab7 !important;
+}
