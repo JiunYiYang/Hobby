@@ -13,21 +13,21 @@ export class PoolComponent implements OnInit {
   bigvs: Bigv[] = [
                       {
                         name: '這人牛逼',
-                        image: './../../assets/images/t5.jpg',
+                        image: './assets/images/t5.jpg',
                         category: '設計',
                         description: 'Gogoro 網站UI設計師',
                         results: 23,
                       },
                       {
                         name: '這人依然牛逼',
-                        image: './../../assets/images/t6.jpg',
+                        image: './assets/images/t6.jpg',
                         category: '後端開發',
                         description: 'Gogoro 網站後端設計師',
                         results: 29,
                       },
                       {
                         name: '這人哪位',
-                        image: './../../assets/images/CC_10.jpg',
+                        image: './assets/images/CC_10.jpg',
                         category: '專案管理',
                         description: 'Gogoro 專案經理(???)',
                         results: 10,
